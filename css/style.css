@@ -13,8 +13,13 @@ h1 {
 h2 {
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 20px;
   color: #FFFFFF;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.topic {
+  float: left;
 }
 
 header {
@@ -62,7 +67,7 @@ header {
 
 .content {
   background-color: #36393F;
-  padding: 30px 10%;
+  padding: 30px 15%;
   padding-bottom: 50px;
   min-height: 40vh;
 }
@@ -99,6 +104,16 @@ header {
 .button:hover {
   color: #fff;
   background: #3fa06c;
+}
+
+.button_topic {
+  float: right;
+  margin-bottom: 20px;
+}
+
+.content_header {
+  height: 60px;
+  padding: 0px 0px 15px 0px;
 }
 
 .password_box{
@@ -218,4 +233,42 @@ header {
   padding: 0 2px;
   background-color: #36393F;
   transform:translate3d(5px, -6px, 0);
+}
+
+table{
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table td{
+  padding: 15px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table .left {
+  text-align: left;
+}
+
+table .right {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.table_topic {
+  color: #FFFFFF; 
+  text-decoration: none; 
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.table_topic:hover {
+  background-color: #2C2F34;
+}
+
+.table_date {
+  color: #ffffff;
 }

@@ -35,7 +35,7 @@ if(isset($_SESSION['uid'])) {
       ?>
       <div class="wrap">
         <header>
-            <h1 class="logo">… RESBA</h1>
+            <h1 class="logo">RESBA</h1>
             <ul class="global-nav">
               <?php
                 if( isset($_SESSION['uid'])) {
@@ -86,15 +86,30 @@ if(isset($_SESSION['uid'])) {
           }
 	      ?>
         <div class="content_header">
-          <div class="topic"><h2>レスバトル一覧</h2></div>
-
+          <div class="topic"><h2 class="topic">レスバトル一覧</h2></div>
+          <button type="button" class="button button_topic" onclick="location.href='make_topic.php'">テーマを作成</button>
         </div>
-        <div class="content_chat">
+        <hr>
 
-        </div>
-        <div class="content_input">
+        <div class="column">
+          <table>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+            <?php
+              $sql = "SELECT * FROM topics"; //実行するSQLを文字列として記述
+              $result = $mysqli->query($sql); //SQL文の実行
+              if ($result) {
+                while($row = $result->fetch_assoc()) {
+                  echo '<tr>';
+                  echo '<td class="left"><a class="table_topic" href="resbattle.php?topic_id='.$row['topic_id'].'">'.$row['topic_title'].'</td>';
+                  echo '<td class="right"><p class="table_date">'.$row['posted_time'].'</p></td>';
+                  echo '</tr>';
+                }
+              }
+            ?>
 
-        </div>
         </div>
       </div>
       <?php
