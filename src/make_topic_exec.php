@@ -15,13 +15,15 @@
   $mysqli->set_charset("utf8"); //文字コードを設定
   }
   //入力データの受取
-  if(!empty($_POST["topic_title"]) && !empty($_POST["description"])){
+  if(!empty($_POST["topic_title"]) && !empty($_POST["description"]) && !empty($_POST["position1"]) && !empty($_POST["position2"])){
   //POSTされた変数の受取
   $topic_title = $_POST["topic_title"];
   $description = $_POST["description"];
+  $position_red = $_POST["position1"];
+  $position_blue = $_POST["position2"];
   
   //テーマの登録
-  $sql = "insert into topics (topic_title, description) values ('$topic_title','$description')"; //実行するSQLを文字列として記述
+  $sql = "insert into topics (topic_title, description, position_red, position_blue) values ('$topic_title','$description', '$position_red', '$position_red')"; //実行するSQLを文字列として記述
   $result = $mysqli->query($sql); //SQL文の実行
   if ($result) { //SQL実行のエラーチェック
     header('Location:index.php?success=1');

@@ -105,8 +105,7 @@
             <dd>
             <div class="password_box">
                   <div class="password_inner">
-                    <input class="input" id="text1" type="text" name="username" requied>
-                    <div class="password_string">ユーザ名を入力</div>
+                    <input class="input" id="text1" type="text" name="username" requied placeholder="ユーザ名を入力">
                   </div>
                   <i class="fas fa-eye-slash"></i>
               </div>
@@ -116,8 +115,7 @@
               <dd>
               <div class="password_box">
                   <div class="password_inner">
-                    <input class="input" id="text4" type="password" name="password1" requied>
-                    <div class="password_string">パスワードを入力</div>
+                    <input class="input" id="text4" type="password" name="password1" requied placeholder="パスワードを入力">
                   </div>
                   <i class="fas fa-eye-slash"></i>
               </div>
@@ -127,8 +125,7 @@
             <dd>
               <div class="password_box">
                   <div class="password_inner">
-                    <input class="input" id="text2" type="password" name="password2" requied>
-                    <div class="password_string">パスワードを入力(確認用)</div>
+                    <input class="input" id="text2" type="password" name="password2" requied placeholder="パスワードを入力(確認用)">
                   </div>
                   <i class="fas fa-eye-slash"></i>
               </div>

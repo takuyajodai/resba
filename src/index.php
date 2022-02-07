@@ -85,7 +85,7 @@ if(isset($_SESSION['uid'])) {
             echo '</div>';
           }
 	      ?>
-        <div class="content_header">
+        <div class="content_index">
           <div class="topic"><h2 class="topic">レスバトル一覧</h2></div>
           <button type="button" class="button button_topic" onclick="location.href='make_topic.php'">テーマを作成</button>
         </div>

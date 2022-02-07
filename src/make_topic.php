@@ -105,19 +105,42 @@
             <dd>
             <div class="password_box">
                   <div class="password_inner">
-                    <input class="input" id="text1" type="text" name="topic_title" requied>
-                    <div class="password_string">テーマを入力</div>
+                    <input class="input" id="text1" type="text" name="topic_title" requied placeholder="テーマを入力">
                   </div>
                   <i class="fas fa-eye-slash"></i>
               </div>
             </dd>
+
             <dt>概要:</dt>
             <div class="group">
               <dd>
               <div class="password_box">
                   <div class="password_inner">
-                    <input class="input" id="text4" type="text" name="description" requied>
-                    <div class="password_string">テーマの概要</div>
+                    <input class="input" id="text4" type="text" name="description" requied placeholder="テーマの概要">
+                  </div>
+                  <i class="fas fa-eye-slash"></i>
+              </div>
+            </div>
+            </dd>
+
+            <dt><p class="red_side">赤陣営:</p></dt>
+            <div class="group">
+              <dd>
+              <div class="password_box">
+                  <div class="password_inner">
+                    <input class="input" id="text4" type="text" name="position1" requied placeholder="赤陣営の主張">
+                  </div>
+                  <i class="fas fa-eye-slash"></i>
+              </div>
+            </div>
+            </dd>
+
+            <dt><p class="blue_side">青陣営:</p></dt>
+            <div class="group">
+              <dd>
+              <div class="password_box">
+                  <div class="password_inner">
+                    <input class="input" id="text4" type="text" name="position2" requied placeholder="青陣営の主張">
                   </div>
                   <i class="fas fa-eye-slash"></i>
               </div>

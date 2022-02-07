@@ -42,8 +42,17 @@
   $result = $mysqli->query($sql); //SQL文の実行
   if ($result) { //SQL実行のエラーチェック
       session_start(); //セッションを開始する
-      $_SESSION['uid'] = $username;
-      header('Location:index.php?success=4');
+      $sql = "SELECT uid FROM users WHERE username='$username'";
+      $result2 = $mysqli->query($sql); //SQL文の実行
+      if ($result2) {
+        $row = $result2->fetch_assoc(); //結果から一行づつ読み込み
+        $uid = $row["uid"]; //データベースからUIDを取得
+        $_SESSION['uid'] = $uid;
+        header('Location:index.php?success=4');
+      } else {
+        header('Location:user.php?error=1');
+        exit();
+      }
   } else {
       //echo "データの登録に登録に失敗しました <br>";
       //echo "SQL文：$sql <br>"; //本当は表示しないほうがいい

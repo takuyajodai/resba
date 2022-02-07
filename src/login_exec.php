@@ -19,8 +19,8 @@
   //POSTされた変数の受取
   $username = $_POST["username"];
   $password = $_POST["password"];
-  //ユーザ名が既に使用されているかのチェック
-  $sql = "select password from users where username = '$username'"; //実行するSQLを文字列として記述
+  
+  $sql = "select uid, password from users where username = '$username'"; //実行するSQLを文字列として記述
   $result = $mysqli->query($sql); //SQL文の実行
   if( $result->num_rows == 0){
       //echo "ユーザ名「${username}」は登録されていません。<br>";
@@ -34,7 +34,7 @@
       //echo "ユーザ「${username}」が正しく認証されました。<br>";
       //セッション開始
       session_start(); //セッションを開始する
-      $_SESSION['uid'] = $username; //セッション変数uidにデータベースから取得したUIDを登録
+      $_SESSION['uid'] = $uid; //セッション変数uidにデータベースから取得したUIDを登録
       header('Location:index.php?success=4');
   } else {
       //echo "ユーザ「${username}」を認証できませんでした。パスワードが一致しません。<br>";

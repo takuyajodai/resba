@@ -22,6 +22,12 @@ h2 {
   float: left;
 }
 
+.chat_topic {
+  padding: 10px 50px 0px 25px;
+  margin-right: 30%;
+  margin-bottom: 0px;
+}
+
 header {
   width: 100%;
   height: 100px;
@@ -61,7 +67,7 @@ header {
 
 .form {
   background-color: #36393F;
-  padding: 30px 10%;
+  padding: 30px 15%;
   padding-bottom: 50px;
 }
 
@@ -111,9 +117,16 @@ header {
   margin-bottom: 20px;
 }
 
+.content_index {
+  height: 70px;
+  margin: 0px;
+}
+
 .content_header {
-  height: 60px;
-  padding: 0px 0px 15px 0px;
+  height: 110px;
+  margin: 0px;
+  background-color: #2C2F34;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .password_box{
@@ -175,21 +188,6 @@ header {
   box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
 
-.password_string{
-  position: absolute;
-  height: 100%;
-  width: 200px; /*文字列分の長さ*/
-  top: 0; left: 0; bottom: 0; right: 0;
-  padding-left: 10px; /*position: absolute;でのmarginは親要素はみ出す*/
-  font-size: 16px;
-  line-height: 50px; /*文字列を縦方向にmiddleに見せるため*/
-  background-color: transparent;
-  color: #80868b;
-  box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-}
-
 .fa-eye-slash{ /*アイコンに一定のスペースを設ける*/
   height: 20px;
   width: 20px;
@@ -199,40 +197,6 @@ header {
 .input {
   caret-color: #ffffff;
   color: #FFFFFF;
-}
-
-/*アニメーション*/
-#text4:focus + .password_string{
-  color: #55ce8d;
-  font-size: 10px;
-  line-height: 10px;
-  width: 85px;
-  height: 10px;
-  padding: 0 2px;
-  background-color: #36393F;
-  transform:translate3d(5px, -6px, 0);
-}
-
-#text1:focus + .password_string{
-  color: #55ce8d;
-  font-size: 10px;
-  line-height: 10px;
-  width: 85px;
-  height: 10px;
-  padding: 0 2px;
-  background-color: #36393F;
-  transform:translate3d(5px, -6px, 0);
-}
-
-#text2:focus + .password_string{
-  color: #55ce8d;
-  font-size: 10px;
-  line-height: 10px;
-  width: 85px;
-  height: 10px;
-  padding: 0 2px;
-  background-color: #36393F;
-  transform:translate3d(5px, -6px, 0);
 }
 
 table{
@@ -271,4 +235,175 @@ table .right {
 
 .table_date {
   color: #ffffff;
+}
+
+.red_side {
+  color: #DF4A6D;
+}
+
+.blue_side {
+  color: #4C8FFB;
+}
+
+.description {
+  color: #d4d4d4;
+  font-size: 13px;
+  font-weight: 400;
+  padding-left: 25px;
+  padding-bottom: 16px;
+}
+
+
+
+.chat_text {
+  width: 100%;
+  margin: 0px 0px;
+  padding: 0px 30px;
+  background-color: #505257;
+  max-height: 60vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.chat_content {
+  display: flex;
+  justify-content: center;
+  max-height: 60vh;
+}
+
+.red{
+  float: left;
+  text-align: left;
+  color:#FFFFFF;
+  background-color: #DF4A6D;
+  border-radius: 10px 10px 10px 0px;
+  clear: both;
+}
+
+.blue{
+  float: right;
+  text-align: right;
+  color:#FFFFFF;
+  background-color: #4C8FFB;
+  border-radius: 10px 10px 0px 10px;
+  display: inline-block;
+  clear: both;
+}
+
+.other{
+
+}
+
+.chat_area {
+  padding: 5px 15px;
+  margin: 10px;
+}
+
+.chat {
+  width: 100%;
+  height: 60vh;
+  max-height: 100vh;
+  background-color: #505257;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+textarea {
+  width: 70%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.content_input {
+  text-align: center;
+  padding: 0 40px;
+  background-color: #505257;
+  border-radius: 0px 0px 10px 10px;
+  height: 100px;
+  justify-content: center;
+}
+
+
+label {
+  font-weight: 700;
+}
+
+.radio {
+  padding-top: 30px;
+  padding-right: 40px;
+  float: left;
+}
+
+#group {
+  padding-top: 20px;
+  margin-right:0;
+  display: flex;
+}
+
+#password_box {
+  margin-right: 0;
+  width: 75%;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.send_chat_button {
+  float:right;
+  margin:0;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.progress_back{
+  display: block;
+  width: 100%;
+  height: 7px;
+  background: #4C8FFB;
+  position: relative;
+  border-radius: 10px;
+}
+.progress_front{
+  display: block;
+  width: 50%;
+  height: 7px;
+  background: #DF4A6D;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.circle1 {
+  width: 40px;
+  height: 40px;
+  border-radius:100%;
+  text-align: center;
+  line-height: 40px;
+  background-color:  #DF4A6D;
+  margin-right: 20px;
+  margin-left: 20%;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.circle2 {
+  width: 40px;
+  height: 40px;
+  border-radius:100%;
+  text-align: center;
+  line-height: 40px;
+  background-color:  #4C8FFB;
+  margin-right: 20px;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.tmp {
+  display: flex;
 }
